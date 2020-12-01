@@ -1,4 +1,4 @@
-
+ # Created by bart.
 import pprint
 import cal_functions as cal
 pp = pprint.PrettyPrinter(indent=4)
@@ -21,6 +21,7 @@ print("Thursday")
 pp.pprint(cal.get_day("Thursday"))
 
 #figure out how to make friday diffrent
+cal.day_task_from_until('Friday', '16:00', '18:00', 'Fuck All')
 print ("Friday")
 
 #how to make mon til fryday in a row togather
