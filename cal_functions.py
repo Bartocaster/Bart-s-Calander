@@ -10,8 +10,7 @@ calander = {
     "Saturday": {},
     "Sunday": {}
 }
-
-
+TIME_DELTA = 30
 def day_task_from_until(day, start, end, task):
     time_intervals = get_time_intervals()
     s = None
@@ -38,7 +37,7 @@ def get_time_intervals():
         temp_time = ""
         if (i < 20):
             temp_time += "0"
-        temp_time += str(math.floor(i / 2))
+        temp_time += str(int(math.floor(i / 2)))
         temp_time += ":"
         if (i % 2 == 0):
             temp_time += "00"
@@ -52,3 +51,18 @@ def get_day(day):
 
 for k in calander.keys():
     day_task_from_until(k, "00:00", "23:30", "Free")
+
+def get_free_time_for_day(day):
+    free_time = []
+    for t_slot in (calander[day].keys()):
+        if (calander[day][t_slot]  == "Free"):
+            free_time.append(t_slot)
+    return free_time
+
+def count_free_time_for_day(day):
+    free_time = get_free_time_for_day(day)
+    free_minutes =  len(free_time) * TIME_DELTA
+    #TODO: Return as DateTime: X Hours and Y Minutes
+    #free_hours = math.floor(free_minutes / 60)
+    return free_minutes
+
