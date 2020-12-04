@@ -22,8 +22,7 @@ pp.pprint(cal.get_day("Thursday"))
 
 #figure out how to make friday diffrent
 cal.day_task_from_until('Friday', '16:00', '18:00', 'Fuck All')
-print ("Friday")
-
-#how to make mon til fryday in a row togather
+for k in cal.calander.keys():
+    print (k + "\t Free Time: \t" + str(cal.count_free_time_for_day(k)))
 
 
