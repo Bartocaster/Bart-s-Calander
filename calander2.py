@@ -25,4 +25,4 @@ cal.day_task_from_until('Friday', '16:00', '18:00', 'Fuck All')
 for k in cal.calander.keys():
     print (k + "\t Free Time: \t" + str(cal.count_free_time_for_day(k)))
 
-
+#TODO: set programming time whit warren.
