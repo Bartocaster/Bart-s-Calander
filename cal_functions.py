@@ -66,3 +66,7 @@ def count_free_time_for_day(day):
     #free_hours = math.floor(free_minutes / 60)
     return free_minutes
 
+
+def clear_day(day):
+    for t_slot in (calander[day].keys()):
+        calander[day][t_slot]  = "Free"
