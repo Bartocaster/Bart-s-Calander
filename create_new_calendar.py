@@ -13,8 +13,8 @@ def get_next_day(current_day):
 	return days_of_week[current_day_index]
 
 if __name__ == "__main__":
-	user = raw_input("Enter Name of user to create:\t\t")
-	first_day_of_year = raw_input("Enter first day of the year (01/01/21):\t")
+	user = input("Enter Name of user to create:\t\t")
+	first_day_of_year = input("Enter first day of the year (01/01/21):\t")
 	if first_day_of_year not in days_of_week:
 		print("Invalid Start Day")
 		print(', '.join(days_of_week) + " are valid days")
