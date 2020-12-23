@@ -1,10 +1,15 @@
- # Created by bart.
+ # Created by B. Huiskamp.
+
 import pprint
-import cal_functions as cal
+import cal_functions as cal # cal_functions is the name of the library. We are aliasing it as cal
+
+
 pp = pprint.PrettyPrinter(indent=4)
 
 
-#Populate All Days
+# Populate All Days
+
+# cal is referencing the cal_functions library (We alias cal_functions as cal)
 cal.everyday_task_from_until("00:00", "06:00", "Sleep")
 cal.everyday_task_from_until("22:00", "23:30", "Sleep")
 cal.everyday_task_from_until("06:30", "17:00", "Work")
@@ -22,7 +27,8 @@ pp.pprint(cal.get_day("Thursday"))
 
 #figure out how to make friday diffrent
 cal.day_task_from_until('Friday', '16:00', '18:00', 'Fuck All')
+
+
+# Get free time for each day.
 for k in cal.calander.keys():
     print (k + "\t Free Time: \t" + str(cal.count_free_time_for_day(k)))
-
-#TODO: set programming time with Warren.

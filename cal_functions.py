@@ -1,4 +1,6 @@
 # Created by wfletch.
+
+# This module holds static functions to be used for the creation of a calendar.
 import math
 
 calander = {

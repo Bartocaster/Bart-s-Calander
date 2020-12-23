@@ -1,8 +1,9 @@
+# Created by Warren Fletcher (wfletch)
+
 import sys, getopt
 import json
-
-
 import cal_functions as cf
+
 # What Days of the week do we want to have in our calander
 days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday", "Sunday"]
 
