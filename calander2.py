@@ -16,6 +16,14 @@ cal.everyday_task_from_until("06:30", "17:00", "Work")
 cal.everyday_task_from_until( "17:30", "17:30", "Rest")
 cal.everyday_task_from_until( "19:00", "19:30", "dinner")
 
+
+
+#figure out how to make friday diffrent
+# cal.day_task_from_until('Friday', '16:00', '18:00', 'Fuck All')
+
+
+# TODO: Set Up Saturday and Sunday
+
 print("Monday")
 pp.pprint(cal.get_day("Monday"))
 print("Tuesday")
@@ -24,11 +32,3 @@ print("Wednesday")
 pp.pprint(cal.get_day("Wednesday"))
 print("Thursday")
 pp.pprint(cal.get_day("Thursday"))
-
-#figure out how to make friday diffrent
-cal.day_task_from_until('Friday', '16:00', '18:00', 'Fuck All')
-
-
-# Get free time for each day.
-for k in cal.calander.keys():
-    print (k + "\t Free Time: \t" + str(cal.count_free_time_for_day(k)))
