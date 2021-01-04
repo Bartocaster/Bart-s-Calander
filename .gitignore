@@ -1,3 +1,5 @@
 .idea
 *.pyc
 .__pycache__
+/training/TODO
+/training/mosh python coding.py
