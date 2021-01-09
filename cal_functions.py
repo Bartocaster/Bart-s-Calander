@@ -72,3 +72,19 @@ def count_free_time_for_day(day):
 def clear_day(day):
     for t_slot in (calander[day].keys()):
         calander[day][t_slot]  = "Free"
+
+
+def is_valid_time(time):
+    # TODO: Convert this to a regex
+    if time in get_time_intervals():
+        return True
+    else:
+        return False
+
+def is_valid_day(day):
+    # This is a very complicated peice of code. I don't really write code this way
+    # map and reduce of important to math programming. Don't be scared if you see this in future.
+    return day.lower() in list(map(lambda x: x.lower(), calander.keys()))
+
+def is_valid_activity(activity):
+    raise Exception("Not Implemented Yet")
